@@ -1,17 +1,16 @@
 import pygame
 
 class vastane:
-    def __init__(self):
-        
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
         self.elud = 1
         self.asukoht = 0
         self.teekond = [(486, 4),(484, 128),(436, 225),(353, 220),(287, 178),(163, 270),(159, 347),(270, 478),(276, 901),(643, 910),(868, 678),(880, 120),(1202, 107),(1299, 18),(1426, 14),(1547, 139),(1552, 212),(1393, 373),(1327, 521),(1296, 643),(1327, 685),(1424, 658),(1520, 713),(1516, 980)]
         self.pilt = []
-        self.x = self.teekond[0][0]
-        self.y = self.teekond[0][1]
         self.mitmespilt = 0
         self.samme = 0
-        self.kaugus = 0
+        self.kaugus
 
     def pildile(self, aken):
 

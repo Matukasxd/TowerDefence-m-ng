@@ -1,6 +1,8 @@
 import pygame
 import math
 import os
+from vastased.vastane1 import vastane1
+from vastased.vastane import vastane
 #TODO:
 #turretite valik, mäng vaatab kus on hiire positsioon kui on turreti valikus mingi torni peal,
 #ja tuleb
@@ -13,15 +15,17 @@ kõrgus = 1056
 aken = pygame.display.set_mode((laius,kõrgus))
 #max framerate, prolly tasub cappida olenevalt display refresist
 FPS = 144
-WHITE = (255,255,255)
 tankix = 100
 tankiy = 100
-#teeb backgroundi valgeks, seda ei peaks tegelt nkn näha olema
 background = pygame.image.load(os.path.join("Assets", "MAP1.png"))
 Tank = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Hulls_Color_A", "Hull_01.PNG"))
 Tank = pygame.transform.rotate(pygame.transform.scale(Tank,(tankix,tankiy)), 25)
 Tankturret = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Weapon_Color_A", "Gun_01.PNG"))
 Tankturret = pygame.transform.rotate(pygame.transform.scale(Tankturret,(60,75)), 45)
+kuul = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Effects", "Exhaust_Fire.png"))
+plahvatusA = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Effects","Explosion_A.png"))
+plahvatusB = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Effects","Explosion_B.png"))
+plahvatusC = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Effects","Explosion_C.png"))
 
 x, y, dx, dy = 360,240,0,0
 tankX,tankY= 1500,1200
@@ -37,6 +41,8 @@ def display():
     aken.blit(background, (0,0))
     aken.blit(Tank,(1080,690))
     aken.blit(Tankturret,(1087,705))
+    for i in vastane1.img:
+        aken.blit((i), (0,0))
 def main():
     uuenda = False
     clock = pygame.time.Clock()
