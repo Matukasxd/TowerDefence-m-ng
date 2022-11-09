@@ -9,14 +9,18 @@ import os
 #eventidega vaatama, kas hiirega vajutatakse torni valikute peale või asetatakse mapi peale
 #reso
 laius = 1920
-kõrgus = 1080
+kõrgus = 1056
 aken = pygame.display.set_mode((laius,kõrgus))
 #max framerate, prolly tasub cappida olenevalt display refresist
 FPS = 144
 WHITE = (255,255,255)
 #teeb backgroundi valgeks, seda ei peaks tegelt nkn näha olema
 background = pygame.image.load(os.path.join("Assets", "MAP1.png"))
+Tank = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Hulls_Color_A", "Hull_01.PNG"))
+
 x, y, dx, dy = 360,240,0,0
+tankX,tankY= 1500,1200
+
 def mouse(hiir_x, hiir_y):
     global x,y,dx,dy
     dx = hiir_x - x
@@ -26,6 +30,7 @@ def mouse(hiir_x, hiir_y):
 def display():
     pygame.display.update()
     aken.blit(background, (0,0))
+    aken.blit(Tank,(0,0))
 
 def main():
     uuenda = False
@@ -38,8 +43,10 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
             hiir = pygame.mouse.get_pos()
+            klikke = []
             if event.type == pygame.MOUSEBUTTONDOWN:
-                print(hiir)
+                klikke.append(hiir)
+                print(klikke)
         if uuenda:
             mouse(hiir_x,hiir_y)
         display()

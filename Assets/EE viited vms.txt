@@ -2,6 +2,7 @@ ASSETS USED:
 https://opengameart.org/content/whispers-of-avalon-grassland-tileset #map
 https://craftpix.net/freebies/free-stone-tower-game-assets/?num=2&count=32&sq=top%20down&pos=7 #tornid
 https://craftpix.net/freebies/free-monster-enemy-game-sprites/?num=1&count=32&sq=top%20down&pos=9 #monster
+https://craftpix.net/freebies/free-2d-battle-tank-game-assets/ #tanks
 
 Program used to create map:
 https://www.mapeditor.org/
