@@ -14,9 +14,14 @@ aken = pygame.display.set_mode((laius,kõrgus))
 #max framerate, prolly tasub cappida olenevalt display refresist
 FPS = 144
 WHITE = (255,255,255)
+tankix = 100
+tankiy = 100
 #teeb backgroundi valgeks, seda ei peaks tegelt nkn näha olema
 background = pygame.image.load(os.path.join("Assets", "MAP1.png"))
 Tank = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Hulls_Color_A", "Hull_01.PNG"))
+Tank = pygame.transform.rotate(pygame.transform.scale(Tank,(tankix,tankiy)), 25)
+Tankturret = pygame.image.load(os.path.join("Assets\Tower Tank\PNG\Weapon_Color_A", "Gun_01.PNG"))
+Tankturret = pygame.transform.rotate(pygame.transform.scale(Tankturret,(60,75)), 45)
 
 x, y, dx, dy = 360,240,0,0
 tankX,tankY= 1500,1200
@@ -30,8 +35,8 @@ def mouse(hiir_x, hiir_y):
 def display():
     pygame.display.update()
     aken.blit(background, (0,0))
-    aken.blit(Tank,(0,0))
-
+    aken.blit(Tank,(1080,690))
+    aken.blit(Tankturret,(1087,705))
 def main():
     uuenda = False
     clock = pygame.time.Clock()
@@ -43,10 +48,8 @@ def main():
             if event.type == pygame.QUIT:
                 run = False
             hiir = pygame.mouse.get_pos()
-            klikke = []
             if event.type == pygame.MOUSEBUTTONDOWN:
-                klikke.append(hiir)
-                print(klikke)
+                print(hiir)
         if uuenda:
             mouse(hiir_x,hiir_y)
         display()
