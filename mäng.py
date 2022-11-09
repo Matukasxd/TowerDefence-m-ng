@@ -1,3 +1,4 @@
+#Lingid kasutatud assetitele Assets\Viited.txt
 import pygame
 import math
 import os
