@@ -1,1 +1,8 @@
-Tegelesime projektiga ja jõudsime arusaamale, et see on liiga keerukas, otsustasime projekti scrappida, teeme selle asemel tanki mängu.
+Esialgne plaan oli teha tower defense stiilis mäng, ehk vastased tulevad punktist A ja liiguvad punkti B, mängija peab seda takistama, pannes mänguväljale maha torne,
+meil on tornide asemel tankid, sest nende assetid sai tasuta.
+Tegelesime projektiga ja jõudsime arusaamale, et see on liiga keerukas (seal on vaja kasutada klasse, mida me kumbki ei mõista, ja selleks, et mäng oleks vähegi lõbus, 
+tuleks lisada palju erinevaid torne ja vastaseid, ), otsustasime projekti scrappida, teeme selle asemel tanki mängu, kus 2 mängijat üritavad
+üksteise tanke õhku lasta.
+
+Selleks, et praegust osa käivitada tuleb jooksutada mäng.py faili. Ekraanile ilmub mängukaart, tank ja üks vastane, kes küll peaks liikuma, aga ma ei saa aru kuidas see
+töötab ja ei taha täiesti copypaste koodi ka teha, sest siis kaob nagu projekti mõte ära.
